@@ -1,0 +1,235 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.map-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+  
+
+.search-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(7, 65, 135, 0.3);
+    max-width: 600px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #144fff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #2d9eef;
+}
+
+.transport-mode-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.transport-mode-select label {
+    font-size: 16px;
+    color: #333;
+}
+
+.transport-mode-select select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.transport-mode-select select:hover,
+.transport-mode-select select:focus {
+    box-shadow: 0 0 5px rgba(0, 143, 209, 0.3);
+}
+
+
+
+.places-list-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 143, 209, 0.3);
+    z-index: 9;
+}
+
+
+.places-list-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #94d0f8;
+}
+
+.places-list-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.places-list-overlay li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #0496f7;
+    padding-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.places-list-overlay li:hover {
+    background-color: #f0f8ff;
+}
+
+
+
+.accommodations-list-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(240, 98, 146, 0.3);
+    z-index: 10;
+}
+
+.accommodations-list-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #e91e63;
+}
+
+.accommodations-list-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accommodations-list-overlay li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e91e63;
+    padding-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.accommodations-list-overlay li:hover {
+    background-color: #f7f7f7;
+}
+
+
+
+@media (max-width: 768px) {
+    .places-list-overlay,
+    .accommodations-list-overlay {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+    .places-list-overlay {
+        bottom: 160px;
+    }
+    .accommodations-list-overlay {
+        bottom: 20px;
+    }
+}
+
+.favorites-button {
+    background-color: #f7f7f7;
+    border: none;
+    color: black;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.favorites-button:hover {
+    background-color: #94d0f8;
+}
+
+.add-to-favorites {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add-to-favorites:hover {
+    background-color: #45a049;
+}
